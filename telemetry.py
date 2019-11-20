@@ -11,7 +11,8 @@ from kivy.lang import Builder
 
 #kv = Builder.load_file("tire_temps.kv")
 
-from tires import Tires
+from left import Left
+from middle import Middle
 
 class MainScreen(App):
 
@@ -20,16 +21,11 @@ class MainScreen(App):
         Window.fullscreen = False
         mainscreen = GridLayout()
         mainscreen.cols = 3
-        left = FloatLayout()
+        left = Left()
+        middle = Middle()
 
-        #tire_temps
-        tire_temps = Tires(
-            pos_hint={'x':0, 'y':0},
-            size_hint = (1, 0.5)
-        )
-        left.add_widget(tire_temps)
         mainscreen.add_widget(left)
-        mainscreen.add_widget(Label(text = "tipota"))
+        mainscreen.add_widget(middle)
         mainscreen.add_widget(Label(text = "tipota"))
         return mainscreen
 
