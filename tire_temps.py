@@ -22,9 +22,9 @@ class Tire_Temps(FloatLayout):
         
         #arrow image
         #self.arrow = Image(source = "assets/arrow_vector.png")
-        #self.arrow.size_hint_x = 1
-        #self.arrow.size_hint_y = 1
-        #self.arrow.p
+        #self.arrow.size_hint_x = 0.7
+        #self.arrow.size_hint_y = 0.7
+        #self.arrow.pos_hint = {"x":0.15, "bottom":0.45}
 
         #self.add_widget(self.arrow)
         self.add_widget(self.fl)

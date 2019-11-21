@@ -7,7 +7,7 @@ from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
-from kivy.graphics import Color, Rectangle, Canvas, RoundedRectangle
+from kivy.graphics import Color, Rectangle, Canvas, RoundedRectangle, Line
 from kivy.properties import StringProperty, ListProperty, NumericProperty
 
 
@@ -24,6 +24,11 @@ Builder.load_string('''
                 pos: self.x, self.y
                 size: self.size
                 radius: [20,0,0,20]
+            #Color:
+                #rgba: 1,1,1,1
+            #Line:
+               #rectangle: self.x,self.y,self.width,self.height
+                #width: 1
     Label:
         text: "li"
         canvas.before:
